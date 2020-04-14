@@ -1,6 +1,9 @@
 GIT
 gitk --all& show commits
 
+Browser
+in console pointing to the func press F11 to thow next to that func
+
 PhpStorm
 
 CTRL+ALT + n Open certain File like in search
@@ -14,6 +17,9 @@ SHIFT+F6 refact file name or var name
 ALT+ENTER - add import dependensise
 
 CTRL+ALT+left Change tabcontrol to previous
+
+CTRL+ALT+V when pointing in the func params it create variable up to the func with that params
+
 
 
 
