@@ -1,38 +1,16 @@
-.app-header {
-    background-color: #0e72b2;
-}
-.app-header__row {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding: 15px 15px;
-}
-.app-header__logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.app-header__title {
-    flex-grow: 1;
-    text-align: center;
+
+* {
+    box-sizing: border-box;
 }
 /* Content Starts here */
 .app-row {
     max-width: 1024px;
     margin: 0 auto;
     display: flex;
-    padding: 0 15px;
+    padding: 0;
     background-color: gray;
 }
-.app-sidebar {
-    width: 200px;
-}
-.app-sidebar__list {
-    list-style: none;
-}
+
 /* Content */
 .app-content {
     flex-grow: 1;

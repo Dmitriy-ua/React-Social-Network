@@ -1,0 +1,19 @@
+GIT
+gitk --all& show commits
+
+PhpStorm
+
+CTRL+ALT + n Open certain File like in search
+
+CTRL+TAB Switch tab controls
+
+CTRL+ALT L refact code with indents
+
+SHIFT+F6 refact file name or var name
+
+ALT+ENTER - add import dependensise
+
+CTRL+ALT+left Change tabcontrol to previous
+
+
+

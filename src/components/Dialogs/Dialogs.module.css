@@ -1,0 +1,31 @@
+.dialogs {
+    display: flex;
+    padding: 15px 0;
+}
+.left_cell {
+    border-right: 1px solid #fff;
+    padding: 50px 15px;
+    width: 200px;
+}
+
+.right_cell {
+    padding: 50px 15px;
+    width: calc(100% - 200px);
+}
+
+.dialogs__list {
+    list-style: none;
+
+}
+
+.dialogs__item {
+    margin-bottom: 10px;
+}
+
+.messages__list {
+    list-style: none;
+}
+
+.messages__item {
+    margin-bottom: 10px;
+}

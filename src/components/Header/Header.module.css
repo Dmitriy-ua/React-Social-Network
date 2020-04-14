@@ -1,0 +1,21 @@
+.header {
+    background-color: #0e72b2;
+}
+.header__row {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+}
+.header__logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.header__title {
+    flex-grow: 1;
+    text-align: center;
+}

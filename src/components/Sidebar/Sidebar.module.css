@@ -1,0 +1,24 @@
+.sidebar {
+    background-color: green;
+    width: 200px;
+}
+
+.sidebar__list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 15px;
+}
+
+.sidebar__list_item {
+    margin-left: 0;
+}
+
+.sidebar__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.sidebar__link.activeLink {
+    color: aqua;
+}

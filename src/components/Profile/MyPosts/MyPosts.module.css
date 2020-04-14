@@ -1,0 +1,13 @@
+.my_posts__wrapper {
+
+}
+
+.my_posts__title {
+
+}
+
+.posts_form textarea{
+    width: 100%;
+    resize: none;
+    max-width: 100% ;
+}
