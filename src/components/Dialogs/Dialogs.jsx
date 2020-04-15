@@ -1,6 +1,7 @@
 import React from "react";
 import classes from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
+import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/state";
 
 const DialogItem = (props) => {
     return (
@@ -16,36 +17,44 @@ const Messages = (props) => {
     );
 }
 
-const Dialogs = () => {
+const Dialogs = (props) => {
 
-    let dialogsData = [
-        {id: 1, name: 'Dmitriy'},
-        {id: 2, name: 'Valera'},
-        {id: 3, name: 'Sveta'},
-        {id: 4, name: 'Lena'},
-    ];
+    let state = props.store.getState().dialogsPage;
 
-    let messagesData = [
-        {id: 1, message: 'Hi'},
-        {id: 1, message: 'What\'s up'},
-        {id: 1, message: 'Pretty good'},
-        {id: 1, message: 'Great'},
-    ];
+    let dialogElements = state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+    let messageElements = state.messages.map(message => <Messages message={message.message} id={message.id}/>);
+
+    let newMessageBody = state.newMessageBody;
+    let onSendMessageClick = () => {
+        props.store.dispatch(sendMessageCreator());
+    }
+    let onNewMessageChange = (e) => {
+        let body = e.target.value;
+        props.store.dispatch(updateNewMessageBodyCreator(body));
+    }
 
     return (
         <main className={classes.dialogs}>
             <div className={classes.left_cell}>
                 <ul className={classes.dialogs__list}>
-                    <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+                    {dialogElements}
                 </ul>
             </div>
             <div className={classes.right_cell}>
                 <ul className={classes.messages__list}>
-                    <Messages message={messagesData[0].messaged} />
+                    {messageElements}
                 </ul>
-                <iframe src="https://scratch.mit.edu/projects/149636497/embed" allowTransparency="true" width="485"
-                        height="402" frameBorder="0" scrolling="no" allowFullScreen></iframe>
-    </div>
+                <div>
+                    <p>
+                    <textarea value={newMessageBody}
+                              onChange={onNewMessageChange}
+                              pleceholder="Enter your message"/>
+                    </p>
+                    <p>
+                        <button onClick={onSendMessageClick}>Send</button>
+                    </p>
+                </div>
+            </div>
 
         </main>
     );
