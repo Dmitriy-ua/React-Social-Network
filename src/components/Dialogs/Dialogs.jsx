@@ -1,19 +1,20 @@
 import React from "react";
 import classes from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/state";
+import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogsReducer";
 
 const DialogItem = (props) => {
     return (
         <li className={classes.dialogs__item}>
-            <NavLink to={'/dialogs/' + props.id}>{props.name}</NavLink>
+            <NavLink to={'/dialogs/' + props.id} key={props.id}>{props.name}</NavLink>
         </li>
     );
 }
 
 const Messages = (props) => {
+
     return (
-        <li className={classes.messages__item}> {props.message} </li>
+        <li className={classes.messages__item} key={props.id}> {props.message} </li>
     );
 }
 
@@ -21,8 +22,11 @@ const Dialogs = (props) => {
 
     let state = props.store.getState().dialogsPage;
 
-    let dialogElements = state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
-    let messageElements = state.messages.map(message => <Messages message={message.message} id={message.id}/>);
+    let dialogElements = state.dialogs.map( (dialog, index) =>
+        <DialogItem name={dialog.name} id={dialog.id} key={index}/>);
+
+    let messageElements = state.messages.map( (message, index) =>
+        <Messages message={message.message} id={message.id} key={index}/>);
 
     let newMessageBody = state.newMessageBody;
     let onSendMessageClick = () => {

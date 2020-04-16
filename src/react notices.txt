@@ -6,9 +6,9 @@ in console pointing to the func press F11 to thow next to that func
 
 PhpStorm
 
-CTRL+ALT + n - Open certain File like in search
+CTRL+SHIFT (double SHIFT) + n - Open certain File like in search
 
-CTRL+TAB - Switch tab controls
+CTRL+TAB - Switch tab controlsn
 
 CTRL+ALT L - refact code with indents
 
@@ -21,6 +21,10 @@ CTRL+ALT+left - Change tabcontrol to previous
 CTRL+ALT+V - when pointing in the func params it create variable up to the func with that params
 
 CTRL+ALT+J - When you select some html you may wrap it by any tag
+
+Ctrl+Shift+V - Paste specific entry from the clipboard history﻿
+
+ALT+F1 - View current file in the project tree
 
 
 
