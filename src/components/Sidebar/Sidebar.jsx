@@ -13,6 +13,9 @@ const Sidebar = () => {
                     <NavLink to="/dialogs" className={classes.sidebar__link} activeClassName={classes.activeLink}>Messages</NavLink>
                 </li>
                 <li className="app-sidebar__list-item">
+                    <NavLink to="/games" className={classes.sidebar__link} activeClassName={classes.activeLink}>Games</NavLink>
+                </li>
+                <li className="app-sidebar__list-item">
                     <NavLink to="/news" className={classes.sidebar__link} activeClassName={classes.activeLink}>News</NavLink>
                 </li>
                 <li className="app-sidebar__list-item">
