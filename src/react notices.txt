@@ -2,7 +2,8 @@ GIT
 gitk --all& show commits
 
 Browser
-in console pointing to the func press F11 to thow next to that func
+F11 in console pointing to the func press F11 to thow next to that func
+F10 in console show all var values
 
 PhpStorm
 
