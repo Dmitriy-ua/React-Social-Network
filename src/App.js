@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Profile from "./components/Profile/Profile";
 import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
 const GamesPage = () => {
     return (
@@ -24,8 +25,8 @@ const App = (props) => {
                 <Sidebar/>
                 <Route path='/games' render={ () => <GamesPage /> }/>
                 <Route path='/dialogs' render={ () => <DialogsContainer /> }/>
-                {/*<Route path='/dialogs' render={ () => <DialogsContainer store={props.store} /> }/>*/}
                 <Route path='/profile' render={ () => <Profile /> }/>
+                <Route path='/users/' render={ () =>  <UsersContainer /> } />
             </div>
         </div>
 
