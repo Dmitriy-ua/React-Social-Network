@@ -21,6 +21,9 @@ const Sidebar = () => {
                 <li className="app-sidebar__list-item">
                     <NavLink to="/music" className={classes.sidebar__link} activeClassName={classes.activeLink}>Music</NavLink>
                 </li>
+                <li className="app-sidebar__list-item">
+                    <NavLink to="/users" className={classes.sidebar__link} activeClassName={classes.activeLink}>Users</NavLink>
+                </li>
             </ul>
         </aside>
     );
