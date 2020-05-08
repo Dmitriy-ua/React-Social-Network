@@ -13,4 +13,7 @@ let reducersBunch = combineReducers({
 
 let store = createStore(reducersBunch);
 
+/* TODO: For debug only */
+window.store = store;
+
 export default store;

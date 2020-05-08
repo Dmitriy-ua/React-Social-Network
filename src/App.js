@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Profile from "./components/Profile/Profile";
 import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 const GamesPage = () => {
     return (
@@ -25,7 +25,7 @@ const App = (props) => {
                 <Sidebar/>
                 <Route path='/games' render={ () => <GamesPage /> }/>
                 <Route path='/dialogs' render={ () => <DialogsContainer /> }/>
-                <Route path='/profile' render={ () => <Profile /> }/>
+                <Route path='/profile' render={ () => <ProfileContainer /> }/>
                 <Route path='/users/' render={ () =>  <UsersContainer /> } />
             </div>
         </div>
