@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import {Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 const GamesPage = () => {
     return (
@@ -20,9 +20,13 @@ const App = (props) => {
 
     return (
         <div className="App">
-            <Header/>
+
+            <HeaderContainer/>
+
             <div className="app-row">
+
                 <Sidebar/>
+
                 <Route path='/games' render={ () => <GamesPage /> }/>
                 <Route path='/dialogs' render={ () => <DialogsContainer /> }/>
                 <Route path='/profile/:userId?' render={ () => <ProfileContainer /> }/>
