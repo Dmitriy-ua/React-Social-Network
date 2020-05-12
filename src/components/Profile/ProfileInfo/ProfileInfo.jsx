@@ -3,9 +3,9 @@ import React from "react";
 const ProfileInfo = (props) => {
     return (
         <div className='app-content'>
-            <p className='app-banner' >
+            <div className='app-banner' >
                 <img src="https://loremflickr.com/1024/300/rio" />
-            </p>
+            </div>
             <p>
                 <img src={props.profile.photos.large } alt=""/>
             </p>

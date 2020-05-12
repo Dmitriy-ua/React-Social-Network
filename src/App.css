@@ -14,7 +14,6 @@
 /* Content */
 .app-content {
     flex-grow: 1;
-    width: calc( 100% - 200px);
     padding: 0;
 }
 .app-banner {
