@@ -7,10 +7,8 @@ import {setAuthUserData} from "../../redux/authReducer";
 class HeaderContainer extends React.Component {
 
     componentDidMount() {
-        debugger
         axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {withCredentials: true})
             .then(response => {
-                debugger
                 if ( response.data.resultCode === 0 ){
                     // Destructuring assignment (Destructurization) will create 3 vars userId, login, email
                     let { id, email, login } = response.data.data;
