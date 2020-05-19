@@ -27,10 +27,12 @@ const authReducer = (state = initialState, action) => {
 
 /* Action Creators */
 export const setAuthUserData = (userId, email, login) => ({ type: SET_USER_DATA, data: {userId, email, login } });
+/* Thunk creator */
 export const getAuthUserData = () => (dispatch) => {
     authAPI.me()
         .then(response => {
             if ( response.data.resultCode === 0 ){
+
                 // Destructuring assignment (Destructurization) will create 3 vars userId, login, email
                 let { id, email, login } = response.data.data;
                 dispatch( setAuthUserData( id, email, login ) );
