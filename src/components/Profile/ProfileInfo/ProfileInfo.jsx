@@ -7,11 +7,11 @@ const ProfileInfo = (props) => {
             {/*<div className='app-banner' >*/}
             {/*    <img src="https://loremflickr.com/1024/300/rio" />*/}
             {/*</div>*/}
-            <p>
+            <div>
                 <img src={props.profile.photos.large } alt=""/>
-                <ProfileStatus status={'This is Sparta'}/>
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                 <hr/>
-            </p>
+            </div>
 
             <h3> {props.profile.fullName } </h3>
 
