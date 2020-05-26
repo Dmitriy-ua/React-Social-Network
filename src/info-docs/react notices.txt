@@ -28,4 +28,19 @@ Ctrl+Shift+V - Paste specific entry from the clipboard history﻿
 ALT+F1 - View current file in the project tree
 
 
+// redux-form
+yarn add redux-form
+let AddNewPostForm = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit}>
+                <Field component={'textarea'} name="newPostText"/>
+                <button>Post</button>
+        </form>
+    )
+}
+AddNewPostForm = reduxForm( { form: "ProfileAddNewPostForm"} ) (AddNewPostForm);
+// Usage
+<AddNewPostForm onSubmit={myEventHandlerFunc}/>
+
+
 
