@@ -27,6 +27,8 @@ Ctrl+Shift+V - Paste specific entry from the clipboard history﻿
 
 ALT+F1 - View current file in the project tree
 
+CTRL+O Override methods
+
 
 // redux-form
 yarn add redux-form

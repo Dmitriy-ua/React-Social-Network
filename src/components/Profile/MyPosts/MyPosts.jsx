@@ -25,10 +25,12 @@ let AddNewPostForm = (props) => {
 }
 AddNewPostForm = reduxForm( { form: "ProfileAddNewPostForm"} ) (AddNewPostForm);
 
-const MyPosts = (props) => {
-
-
-    let postsElements = props.posts.map( (post,index) => <Post key={index} message={post.message} likesCount={post.likesCount}/>);
+const MyPosts = React.memo(props => {
+    // shouldComponentUpdate(nextProps, nextState, nextContext) { //for object component only
+    //     return nextProps != this.props || nextState != this.state;
+    // }
+    let postsElements = props.posts.map((post, index) =>
+        <Post key={index} message={post.message} likesCount={post.likesCount}/>);
 
     // let newPostElement = React.createRef();
 
@@ -42,12 +44,12 @@ const MyPosts = (props) => {
                 View My Posts
             </h2>
 
-            <AddNewPostForm onSubmit={onAddPost} />
+            <AddNewPostForm onSubmit={onAddPost}/>
 
-            { postsElements }
+            {postsElements}
 
         </div>
     );
-}
+});
 
 export default MyPosts;
