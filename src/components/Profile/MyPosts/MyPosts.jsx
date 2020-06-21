@@ -29,11 +29,13 @@ const MyPosts = React.memo(props => {
     // shouldComponentUpdate(nextProps, nextState, nextContext) { //for object component only
     //     return nextProps != this.props || nextState != this.state;
     // }
-    let postsElements = props.posts.map((post, index) =>
+    let postsElements =
+        [...props.posts]
+        .reverse()
+        .map((post, index) =>
         <Post key={index} message={post.message} likesCount={post.likesCount}/>);
 
     // let newPostElement = React.createRef();
-
     let onAddPost = (values) => {
         props.addPost(values.newPostText);
     }
