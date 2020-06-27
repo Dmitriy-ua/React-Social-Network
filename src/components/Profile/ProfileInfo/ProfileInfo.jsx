@@ -1,20 +1,23 @@
 import React from "react";
-import ProfileStatus from "./ProfileStatus"
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import Preloader from "../../common/Preloader/Preloader";
 
-const ProfileInfo = (props) => {
+const ProfileInfo = ({profile, updateStatus, status }) => {
+
+    if(!profile ) {
+        return <Preloader/>
+    }
+
     return (
         <div className='app-content'>
             <div>
-                <img src={props.profile.photos.large } alt=""/>
-                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
+                <img src={profile.photos.large } alt=""/>
+                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
                 <hr/>
             </div>
 
-            <h3> {props.profile.fullName } </h3>
-
-            <p>{props.profile.aboutMe}</p>
-
+            <h3> {profile.fullName } </h3>
+            <p>{profile.aboutMe}</p>
         </div>
     );
 }
