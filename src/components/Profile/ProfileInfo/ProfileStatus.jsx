@@ -39,7 +39,7 @@ class ProfileStatus extends React.Component{
            <div>
                { !this.state.editMode &&
                    <div className='profileStatus'>
-                        <p onDoubleClick={ this.activateEditMode.bind(this) } style={ {minHeight: '20px'} }>{this.props.status}</p>
+                        <span onDoubleClick={ this.activateEditMode.bind(this) } style={ {minHeight: '20px'} }>{this.props.status}</span>
                    </div>
                }
                { this.state.editMode &&
