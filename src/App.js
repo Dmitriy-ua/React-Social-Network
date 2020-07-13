@@ -2,9 +2,7 @@ import React from 'react';
 import './App.css';
 import Sidebar from "./components/Sidebar/Sidebar";
 import {BrowserRouter, Route, withRouter} from "react-router-dom";
-import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginPage from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
@@ -12,6 +10,10 @@ import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/reduxStore";
+import {withSuspense} from "./hoc/withSuspense";
+
+const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
+const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
 
 const GamesPage = () => {
     return (
@@ -39,11 +41,16 @@ class App extends React.Component {
                 <div className="app-row">
                     <Sidebar/>
                     <div className="app-main">
-                        <Route path='/games' render={() => <GamesPage/>}/>
-                        <Route path='/dialogs' render={() => <DialogsContainer/>}/>
-                        <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+                        <Route path='/dialogs' render={() => {
+                            return <React.Suspense fallback={<Preloader/>}>
+                                <DialogsContainer/>
+                            </React.Suspense>
+                        }}/>
+                        {/*Same action with my hoc*/}
+                        <Route path='/profile/:userId?' render={ withSuspense(ProfileContainer) }/>
                         <Route path='/users/' render={() => <UsersContainer/>}/>
                         <Route path='/login' render={() => <LoginPage/>}/>
+                        <Route path='/games' render={() => <GamesPage/>}/>
                     </div>
 
                 </div>
