@@ -1,8 +1,22 @@
+
+.paginator {
+    text-align: center;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.paginator button {
+    margin: 0 10px;
+}
+
 .selectedPage {
     font-weight: 700;
 }
 .pageLink {
     cursor: pointer;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
 }
 .pageLink:hover {
     font-weight: 700;

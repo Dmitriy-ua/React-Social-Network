@@ -38,12 +38,13 @@ class App extends React.Component {
                 <HeaderContainer/>
                 <div className="app-row">
                     <Sidebar/>
-
-                    <Route path='/games' render={() => <GamesPage/>}/>
-                    <Route path='/dialogs' render={() => <DialogsContainer/>}/>
-                    <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
-                    <Route path='/users/' render={() => <UsersContainer/>}/>
-                    <Route path='/login' render={() => <LoginPage/>}/>
+                    <div className="app-main">
+                        <Route path='/games' render={() => <GamesPage/>}/>
+                        <Route path='/dialogs' render={() => <DialogsContainer/>}/>
+                        <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
+                        <Route path='/users/' render={() => <UsersContainer/>}/>
+                        <Route path='/login' render={() => <LoginPage/>}/>
+                    </div>
 
                 </div>
             </div>

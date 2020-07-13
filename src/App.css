@@ -24,3 +24,6 @@
 .app-banner img {
     width: 100%;
 }
+.app-main {
+    width: calc( 100% - 200px );
+}
