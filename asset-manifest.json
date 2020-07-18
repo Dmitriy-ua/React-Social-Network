@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Dmitriy-ua/React-Social-Network/static/css/main.f64ef732.chunk.css",
+    "main.js": "/Dmitriy-ua/React-Social-Network/static/js/main.c8ab8780.chunk.js",
+    "main.js.map": "/Dmitriy-ua/React-Social-Network/static/js/main.c8ab8780.chunk.js.map",
+    "runtime-main.js": "/Dmitriy-ua/React-Social-Network/static/js/runtime-main.1b01c94f.js",
+    "runtime-main.js.map": "/Dmitriy-ua/React-Social-Network/static/js/runtime-main.1b01c94f.js.map",
+    "static/js/2.fd54bc91.chunk.js": "/Dmitriy-ua/React-Social-Network/static/js/2.fd54bc91.chunk.js",
+    "static/js/2.fd54bc91.chunk.js.map": "/Dmitriy-ua/React-Social-Network/static/js/2.fd54bc91.chunk.js.map",
+    "static/css/3.d81c0449.chunk.css": "/Dmitriy-ua/React-Social-Network/static/css/3.d81c0449.chunk.css",
+    "static/js/3.ab89a0f7.chunk.js": "/Dmitriy-ua/React-Social-Network/static/js/3.ab89a0f7.chunk.js",
+    "static/js/3.ab89a0f7.chunk.js.map": "/Dmitriy-ua/React-Social-Network/static/js/3.ab89a0f7.chunk.js.map",
+    "static/css/4.5b61cbc6.chunk.css": "/Dmitriy-ua/React-Social-Network/static/css/4.5b61cbc6.chunk.css",
+    "static/js/4.eeb54bfd.chunk.js": "/Dmitriy-ua/React-Social-Network/static/js/4.eeb54bfd.chunk.js",
+    "static/js/4.eeb54bfd.chunk.js.map": "/Dmitriy-ua/React-Social-Network/static/js/4.eeb54bfd.chunk.js.map",
+    "index.html": "/Dmitriy-ua/React-Social-Network/index.html",
+    "precache-manifest.a3a289f775edbdf5b72ba67be050e207.js": "/Dmitriy-ua/React-Social-Network/precache-manifest.a3a289f775edbdf5b72ba67be050e207.js",
+    "service-worker.js": "/Dmitriy-ua/React-Social-Network/service-worker.js",
+    "static/css/3.d81c0449.chunk.css.map": "/Dmitriy-ua/React-Social-Network/static/css/3.d81c0449.chunk.css.map",
+    "static/css/4.5b61cbc6.chunk.css.map": "/Dmitriy-ua/React-Social-Network/static/css/4.5b61cbc6.chunk.css.map",
+    "static/css/main.f64ef732.chunk.css.map": "/Dmitriy-ua/React-Social-Network/static/css/main.f64ef732.chunk.css.map",
+    "static/js/2.fd54bc91.chunk.js.LICENSE.txt": "/Dmitriy-ua/React-Social-Network/static/js/2.fd54bc91.chunk.js.LICENSE.txt",
+    "static/media/preloader-colorfull.svg": "/Dmitriy-ua/React-Social-Network/static/media/preloader-colorfull.45cc5273.svg",
+    "static/media/user-icon.png": "/Dmitriy-ua/React-Social-Network/static/media/user-icon.7aea9cc8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b01c94f.js",
+    "static/js/2.fd54bc91.chunk.js",
+    "static/css/main.f64ef732.chunk.css",
+    "static/js/main.c8ab8780.chunk.js"
+  ]
+}
