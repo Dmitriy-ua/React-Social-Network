@@ -7,15 +7,13 @@ F10 in console show all var values
 
 PhpStorm
 
-CTRL+SHIFT (double SHIFT) + n - Open certain File like in search
+CTRL+E Shows recent used files
+
+CTRL+O Override methods
 
 CTRL+TAB - Switch tab controlsn
 
-CTRL+ALT L - refact code with indents
-
-SHIFT+F6 - refact file name or var name
-
-ALT+ENTER - add import dependensise
+CTRL+ALT+L - refact code with indents
 
 CTRL+ALT+left - Change tabcontrol to previous
 
@@ -23,11 +21,17 @@ CTRL+ALT+V - when pointing in the func params it create variable up to the func 
 
 CTRL+ALT+J - When you select some html you may wrap it by any tag
 
-Ctrl+Shift+V - Paste specific entry from the clipboard history﻿
+Ctrl+Shift+V - Paste recent entry from the clipboard history (buffer of exchanges)
+
+CTRL+SHIFT+N (or double SHIFT) - Open certain File like in search
+
+SHIFT+F6 - refact file name or var name
 
 ALT+F1 - View current file in the project tree
 
-CTRL+O Override methods
+ALT+F7 - Show all playces where component uses
+
+ALT+ENTER - add import dependensise
 
 
 // redux-form

@@ -11,7 +11,11 @@ const Profile = (props) => {
 
     return (
         <div className={classes.content_wrapper}>
-            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus}/>
+            <ProfileInfo isOwner={props.isOwner}
+                         profile={props.profile}
+                         status={props.status}
+                         savePhoto={props.savePhoto}
+                         updateStatus={props.updateStatus}/>
             <MyPostsContainer />
         </div>
     );
