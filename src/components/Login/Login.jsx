@@ -7,7 +7,7 @@ import {login} from "../../redux/authReducer";
 import {Redirect} from "react-router-dom";
 import style from "./../common/FormControls/FormControls.module.css"
 
-const LoginForm = ({handleSubmit,error}) => {
+const LoginForm = ({handleSubmit, error}) => {
     return <form onSubmit={handleSubmit}>
 
         { CreateField('Email', 'email', [required], Input ) }

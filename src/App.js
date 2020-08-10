@@ -48,6 +48,7 @@ class App extends React.Component {
                         }}/>
                         {/*Same action with my hoc*/}
                         <Route path='/profile/:userId?' render={ withSuspense(ProfileContainer) }/>
+                        {/*<Route path='/profile/:userId?' render={ () => <ProfileContainer/> }/>*/}
                         <Route path='/users/' render={() => <UsersContainer/>}/>
                         <Route path='/login' render={() => <LoginPage/>}/>
                         <Route path='/games' render={() => <GamesPage/>}/>

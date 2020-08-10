@@ -73,7 +73,7 @@ export const getUserProfile = (userId) => async (dispatch) => {
 };
 
 export const getStatus = (userId) => async (dispatch) => {
-    let response = profileAPI.getStatus(userId);
+    let response = await profileAPI.getStatus(userId);
     dispatch( setStatus(response.data) );
 };
 
@@ -90,6 +90,18 @@ export const savePhoto = (file) => async (dispatch) => {
 
     if( response.data.resultCode === 0) {
         dispatch( savePhotoSuccess(response.data.data.photos) );
+    }
+};
+
+/* Thunk creator */
+export const saveProfile = (profile) => async (dispatch, getState) => {
+    const userId = getState().auth.userId;
+    const response = await profileAPI.saveProfile(profile);
+
+    if( response.data.resultCode === 0) {
+        dispatch( getUserProfile(userId) );
+    } else {
+        
     }
 };
 
